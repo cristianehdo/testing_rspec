@@ -20,7 +20,7 @@ describe "#array_to_hash" do
     expect(array_to_hash(arr)).to be_a(Array)
   end
 
-  it "should build an array of hashes" do
+  it "should build an array of hashes with keys name and age" do
     expect(array_to_hash(arr)).to eq([{name: "john", age: 21}, {name: "carl", age: 33}, {name: "bob", age: 31}])
   end
 end
