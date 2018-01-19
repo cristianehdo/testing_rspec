@@ -8,7 +8,7 @@ describe "#hash_to_array" do
     expect(hash_to_array(hash)).to be_a(Array)
   end
 
-  it "should build an array on key values" do
+  it "should build an array on hash's key values" do
     expect(hash_to_array(hash)).to eq([["a", "abc"], ["b", "bcd"], ["d", "def"]])
   end
 end
