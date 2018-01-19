@@ -12,3 +12,15 @@ describe "#hash_to_array" do
     expect(hash_to_array(hash)).to eq([["a", "abc"], ["b", "bcd"], ["d", "def"]])
   end
 end
+
+describe "#array_to_hash" do
+  let(:arr) { [["john", 21], ["carl", 33], ["bob", 31]] }
+
+  it "should return an array" do
+    expect(array_to_hash(arr)).to be_a(Array)
+  end
+
+  it "should build an array of hashes" do
+    expect(array_to_hash(arr)).to eq([{name: "john", age: 21}, {name: "carl", age: 33}, {name: "bob", age: 31}])
+  end
+end
