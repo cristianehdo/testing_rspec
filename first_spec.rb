@@ -26,10 +26,10 @@ describe "#array_to_hash" do
 end
 
 describe "#anagrams?" do
-  it "should return true" do
+  it "should return true when strings are anagrams" do
     expect(anagrams?("acb", "abc")).to eq(true)
   end
-  it "should return true" do
-    expect(anagrams?("acb", "abc")).to eq(true)
+  it "should return false when strings aren't anagrams" do
+    expect(anagrams?("xcb", "abc")).to eq(false)
   end
 end
