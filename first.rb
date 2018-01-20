@@ -16,8 +16,15 @@ def anagrams?(a_string, another_string)
   string_a == string_b
 end
 
+def create_name(email)
+  email_obj = email.match(/^(\w*\.?\-?\w*\w*\.?\-?\w*)@(\w*\.\w*)$/)
+  name = email_obj[1].tr(".", " ")
+  mail = email_obj[2]
+  [name, mail]
+end
 
+p create_name("alex@gmail.com")
 # p hash_to_array({ "a"=> "abc", "b"=> "bcd", "d"=> "def" })
 # arr = [["john", 21], ["carl", 33], ["bob", 31]]
  # array_to_hash(arr)
-p anagrams?("acb", "abc")
+# p anagrams?("acb", "abc")

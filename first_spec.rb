@@ -33,3 +33,13 @@ describe "#anagrams?" do
     expect(anagrams?("xcb", "abc")).to eq(false)
   end
 end
+
+describe "#create_name" do
+  it "should return an array" do
+    expect(create_name("alex@gmail.com")).to be_a(Array)
+  end
+  it "should separate name from @...com" do
+    expect(create_name("alex@gmail.com")).to eq(["alex", "gmail.com"])
+  end
+
+end
