@@ -1,5 +1,6 @@
 # require "rspec"
 require "./first"
+require 'rspec/collection_matchers'
 
 describe "#hash_to_array" do
   let(:hash) { {"a"=> "abc", "b"=> "bcd", "d"=> "def"} }
@@ -38,8 +39,11 @@ describe "#create_name" do
   it "should return an array" do
     expect(create_name("alex@gmail.com")).to be_a(Array)
   end
+  it "should return an array with 2 elements" do
+    expect(create_name("mcdonalds@gmail.com")).to have_exactly(2).items
+  end
   it "should separate name from @...com" do
-    expect(create_name("alex@gmail.com")).to eq(["alex", "gmail.com"])
+    expect(create_name("cedric@gmail.com")).to eq(["cedric", "gmail.com"])
   end
 
 end
