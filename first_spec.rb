@@ -24,3 +24,12 @@ describe "#array_to_hash" do
     expect(array_to_hash(arr)).to eq([{name: "john", age: 21}, {name: "carl", age: 33}, {name: "bob", age: 31}])
   end
 end
+
+describe "#anagrams?" do
+  it "should return true" do
+    expect(anagrams?("acb", "abc")).to eq(true)
+  end
+  it "should return true" do
+    expect(anagrams?("acb", "abc")).to eq(true)
+  end
+end
